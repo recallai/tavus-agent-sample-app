@@ -1,0 +1,34 @@
+:root { color-scheme:light; --blue:#2563eb; --border:#dce3ed; --muted:#64748b; --text:#1e293b; }
+* { box-sizing:border-box; }
+html,body { margin:0; min-height:100%; background:#f6f8fb; color:var(--text); font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; }
+button,input,textarea { font:inherit; }
+.sample { max-width:680px; margin:64px auto; padding:0 20px; }
+.panel { background:white; border:1px solid var(--border); border-radius:12px; padding:32px; }
+h1 { margin:0; font-size:23px; letter-spacing:-.5px; }
+header { margin-bottom:28px; }
+fieldset { border:0; padding:0; margin:0; min-width:0; }
+label,legend { display:block; font-weight:600; margin-bottom:8px; }
+input,textarea { width:100%; border:1px solid #cbd5e1; border-radius:6px; padding:11px 12px; color:var(--text); background:white; margin-bottom:22px; }
+textarea { min-height:200px; resize:vertical; line-height:1.65; }
+input:focus,textarea:focus { outline:2px solid #bfdbfe; border-color:var(--blue); }
+button { cursor:pointer; border:0; border-radius:6px; padding:12px 18px; width:100%; }
+.primary { background:var(--blue); color:white; font-weight:600; }
+.primary:hover:not(:disabled) { background:#1d4ed8; }
+button:disabled { opacity:.5; cursor:not-allowed; }
+button:focus-visible { outline:2px solid var(--blue); outline-offset:3px; }
+.feedback { margin:20px 0 0; padding:12px; border-radius:6px; overflow-wrap:anywhere; }
+.error { color:#991b1b; background:#fef2f2; }.success { color:#1e40af; background:#eff6ff; }
+.avatar { width:100vw; height:100vh; position:relative; overflow:hidden; background:#000; color:#f3f5fa; }
+.avatar video { width:100%; height:100%; object-fit:contain; display:block; }
+.status { z-index:2; position:absolute; inset:0; display:grid; place-content:center; text-align:center; padding:40px; background:#000; }
+@media(max-width:540px) { .sample { margin:24px auto; padding:0 14px; }.panel { padding:24px 20px; } }
+
+.wake-control { display:flex; align-items:center; justify-content:space-between; gap:16px; margin:0 0 22px; }
+.wake-control label { margin:0; }
+.wake-control p { margin:4px 0 0; color:var(--muted); font-size:12px; }
+.wake-switch { flex-shrink:0; width:40px; height:24px; padding:3px; border-radius:24px; background:#94a3b8; }
+.wake-switch span { display:block; width:18px; height:18px; background:white; border-radius:50%; }
+.wake-switch[aria-checked=true] { background:var(--blue); }
+.wake-switch[aria-checked=true] span { transform:translateX(16px); }
+
+.pal-note { margin:0 0 24px; color:var(--muted); font-size:13px; }
